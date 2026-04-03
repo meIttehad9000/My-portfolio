@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahnaf Ittehad | Premium Web Developer</title>
-  <meta name="description" content="Ahnaf Ittehad – Premium web developer helping local businesses grow online with stunning websites and animations.">
+  <meta name="description"
+    content="Ahnaf Ittehad – Premium web developer helping local businesses grow online with stunning websites and animations.">
   <meta property="og:title" content="Ahnaf Ittehad | Premium Web Developer">
-  <meta property="og:description" content="Helping local businesses dominate online with stunning websites and animations.">
+  <meta property="og:description"
+    content="Helping local businesses dominate online with stunning websites and animations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ahnafittehad.com/">
   <meta name="twitter:card" content="summary_large_image">
@@ -18,358 +21,427 @@
     "@type": "Person",
     "name": "Ahnaf Ittehad",
     "url": "https://ahnafittehad.com/",
-    "jobTitle": "Web Developer"
+    "jobTitle": "AI Powered Web Developer"
   }
   </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Fira+Code:wght@400;600&display=swap"
+    rel="stylesheet">
 
   <!-- Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="components/ui/flow-button.css">
 </head>
+
 <body>
-<!-- Intro Animation -->
-<div id="introOverlay" class="intro-overlay">
-  <div class="intro-text">Welcome Partner</div>
-</div>
-
-<!-- Scroll Progress -->
-<div id="scrollProgress"></div>
-
-<!-- Cursor glow -->
-<div class="cursor-glow" id="cursorGlow"></div>
-
-<!-- Neon blobs (decorative) -->
-<div class="neon-blob blob-1" aria-hidden="true"></div>
-<div class="neon-blob blob-2" aria-hidden="true"></div>
-<div class="neon-blob blob-3" aria-hidden="true"></div>
-
-<!-- Particles -->
-<div id="particles-js"></div>
-
-<!-- ── Header ─────────────────────────────────────────────── -->
-<header id="site-header">
-  <div class="logo">Ittehad</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#work">Work</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact" class="nav-cta">Hire Me →</a>
-  </nav>
-</header>
-
-<!-- ── Hero ──────────────────────────────────────────────── -->
-<section id="home" class="hero">
-  <div class="hero-badge">
-    <div class="dot"></div>
-    Available for projects
-  </div>
-
-  <h1>
-    I <span class="line-grad">Build Websites</span><br>
-    That Get You <span class="line-grad">Customers</span>
-  </h1>
-
-  <div class="typed-wrapper">
-    I <span class="typing"></span>
-  </div>
-
-  <p class="hero-desc">
-    Studying CSE at Green University Of Bangladesh. 🎓<br>Helping local businesses dominate online with stunning websites and real results. 🚀
-  </p>
-
-  <div class="hero-btns">
-    <button class="btn-primary" onclick="location='#pricing'"><span>See Pricing</span></button>
-    <button class="btn-outline" onclick="location='#work'">View Work</button>
-  </div>
-
-  <div class="stats-strip">
-    <div class="stat">
-      <div class="num" id="c1">20+</div>
-      <div class="label">Projects Delivered</div>
-    </div>
-    <div class="stat">
-      <div class="num">100%</div>
-      <div class="label">Client Satisfaction</div>
-    </div>
-    <div class="stat">
-      <div class="num">2yr</div>
-      <div class="label">Experience</div>
-    </div>
-    <div class="stat">
-      <div class="num">48h</div>
-      <div class="label">Avg. Response</div>
+  <!-- Intro Animation -->
+  <div id="introOverlay" class="intro-overlay">
+    <div class="intro-text">
+      <span class="welcome-word">Welcome</span> 
+      <span class="partner-word">Partner</span>
+      <svg class="welcome-leaf" viewBox="0 0 24 24" width="48" height="48">
+        <path fill="currentColor" d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
+      </svg>
     </div>
   </div>
-</section>
 
-<!-- ── Skills ─────────────────────────────────────────────── -->
-<section id="skills" style="min-height:auto;padding:60px 24px;">
-  <div class="section-label">What I Use</div>
-  <h2 class="section-title">Skills &amp; Tools</h2>
-  <div class="skills-grid">
-    <span class="skill-badge badge-v">HTML &amp; CSS</span>
-    <span class="skill-badge badge-c">JavaScript</span>
-    <span class="skill-badge badge-p">React.js</span>
-    <span class="skill-badge badge-v">GSAP Animations</span>
-    <span class="skill-badge badge-c">Responsive Design</span>
-    <span class="skill-badge badge-p">E-commerce</span>
-    <span class="skill-badge badge-v">WordPress</span>
-    <span class="skill-badge badge-c">SEO Optimization</span>
-    <span class="skill-badge badge-p">WhatsApp Integration</span>
-  </div>
-</section>
-    <!-- ── Process Flashcards ──────────────────────────────────────── -->
-    <section id="process" style="min-height:auto;padding:80px 24px;">
-      <div class="section-label">Process</div>
-      <h2 class="section-title">How I Work</h2>
-      <div class="flashcards-deck">
-        <div class="flashcard ao-animate" style="animation-delay:0s">
-          <h3>Requirement Gathering</h3>
-          <p>Understand business goals and target audience. Identify required features and expectations.</p>
-        </div>
-        <div class="flashcard ao-animate" style="animation-delay:0.1s">
-          <h3>Research & Planning</h3>
-          <p>Analyze competitors and trends. Plan site structure and choose tech stack.</p>
-        </div>
-        <div class="flashcard ao-animate" style="animation-delay:0.2s">
-          <h3>Wireframing & Design</h3>
-          <p>Create layout and UI design. Ensure responsive design (mobile + desktop).</p>
-        </div>
-        <div class="flashcard ao-animate" style="animation-delay:0.3s">
-          <h3>Development</h3>
-          <p>Build frontend using HTML, CSS, JS. Integrate backend functionality if needed.</p>
-        </div>
-        <div class="flashcard ao-animate" style="animation-delay:0.4s">
-          <h3>Testing</h3>
-          <p>Check for bugs and errors. Ensure cross‑browser and device compatibility.</p>
-        </div>
-        <div class="flashcard ao-animate" style="animation-delay:0.5s">
-          <h3>Deployment</h3>
-          <p>Upload to hosting platform (e.g., Netlify). Connect domain and go live.</p>
-        </div>
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Background Petals -->
+  <div id="leaves-container"></div>
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <header id="site-header">
+    <div class="logo">Ittehad</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact" class="nav-cta">Hire Me →</a>
+    </nav>
+  </header>
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section id="home" class="hero">
+    <div class="hero-badge">
+      <div class="dot"></div>
+      Available for projects
+    </div>
+
+    <h1>
+      Lets Build <span class="line-grad">Something</span><br>
+      That is <span class="line-grad">Worth </span>Visiting.
+    </h1>
+
+    <div class="typed-wrapper">
+      I <span class="typing"></span>
+    </div>
+
+    <p class="hero-desc">
+      Studying CSE at Green University Of Bangladesh. 🎓<br>Helping local businesses dominate online with stunning
+      websites and real results. 🚀
+    </p>
+
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="location='#pricing'"><span>See Pricing</span></button>
+      <button class="btn-outline" onclick="location='#work'">View Work</button>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat">
+        <div class="num" id="c1">20+</div>
+        <div class="label">Projects Delivered</div>
       </div>
-    </section>
-
-<!-- ── Projects ───────────────────────────────────────────── -->
-<section id="work">
-  <div class="section-label">Portfolio</div>
-  <h2 class="section-title">Sample Projects</h2>
-  <p class="section-sub">Hand-crafted websites delivering real business results for local brands.</p>
-  <div id="projectFilters" style="display:flex;gap:10px;justify-content:center;margin-bottom:30px;"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="e-commerce">E-Commerce</button><button class="filter-btn" data-filter="business">Business</button><button class="filter-btn" data-filter="grocery">Grocery</button></div>
-
-  <div class="projects-grid" id="projectsGrid"></div>
-</section>
-
-<!-- ── Pricing ─────────────────────────────────────────────── -->
-<section id="pricing">
-  <div class="section-label">Transparent Pricing</div>
-  <h2 class="section-title">Available Plans</h2>
-  <p class="section-sub">One-time development fee + optional monthly maintenance to keep your site fast, secure &amp; updated.</p>
-
-  <div class="pricing-grid">
-
-    <!-- Starter -->
-    <div class="price-card reveal">
-      <div class="price-tier">Starter</div>
-      <h3>Basic Business</h3>
-      <p class="price-desc">Perfect for getting your first professional online presence.</p>
-      <div class="price-amount"><span>৳</span>2,999</div>
-      <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
-      <div class="price-maintenance">
-        <span class="icon">🔧</span>
-        <span>Maintenance: <strong style="color:var(--accent2);">৳500/month</strong></span>
+      <div class="stat">
+        <div class="num">100%</div>
+        <div class="label">Client Satisfaction</div>
       </div>
-      <div class="divider"></div>
-      <ul class="features-list">
-        <li><span class="check">✓</span> Up to 5 Pages</li>
-        <li><span class="check">✓</span> Mobile Responsive</li>
-        <li><span class="check">✓</span> WhatsApp Button</li>
-        <li><span class="check">✓</span> Basic Animations</li>
-        <li><span class="check">✓</span> 1 Month Free Support</li>
-        <li><span class="cross">✗</span> <span style="opacity:0.5;">E-commerce</span></li>
-        <li><span class="cross">✗</span> <span style="opacity:0.5;">Admin Panel</span></li>
-      </ul>
-      <button class="btn-plan btn-plan-ghost" onclick="window.open('https://wa.me/8801838917670?text=Hi! I want the Starter plan.','_blank')">Get Started</button>
-    </div>
-
-    <!-- Pro -->
-    <div class="price-card featured reveal">
-      <span class="feature-badge">POPULAR</span>
-      <div class="price-tier">Pro</div>
-      <h3>Advanced Website</h3>
-      <p class="price-desc">Stunning animations, premium design &amp; full customization.</p>
-      <div class="price-amount"><span>৳</span>6,999</div>
-      <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
-      <div class="price-maintenance">
-        <span class="icon">🔧</span>
-        <span>Maintenance: <strong style="color:var(--accent2);">৳1,000/month</strong></span>
+      <div class="stat">
+        <div class="num">2yr</div>
+        <div class="label">Experience</div>
       </div>
-      <div class="divider"></div>
-      <ul class="features-list">
-        <li><span class="check">✓</span> Up to 10 Pages</li>
-        <li><span class="check">✓</span> Pro Animations (GSAP)</li>
-        <li><span class="check">✓</span> Mobile Responsive</li>
-        <li><span class="check">✓</span> WhatsApp Integration</li>
-        <li><span class="check">✓</span> Contact Form</li>
-        <li><span class="check">✓</span> SEO Optimization</li>
-        <li><span class="cross">✗</span> <span style="opacity:0.5;">Full E-commerce</span></li>
-      </ul>
-      <button class="btn-plan btn-plan-filled" onclick="window.open('https://wa.me/8801838917670?text=Hi! I want the Pro plan.','_blank')">Get Pro Plan</button>
-    </div>
-
-    <!-- Business -->
-    <div class="price-card reveal">
-      <div class="price-tier">Business</div>
-      <h3>Full E-commerce</h3>
-      <p class="price-desc">Complete online store with admin panel, cart &amp; ordering system.</p>
-      <div class="price-amount"><span>৳</span>14,999</div>
-      <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
-      <div class="price-maintenance">
-        <span class="icon">🔧</span>
-        <span>Maintenance: <strong style="color:var(--accent2);">৳2,000/month</strong></span>
+      <div class="stat">
+        <div class="num">48h</div>
+        <div class="label">Avg. Response</div>
       </div>
-      <div class="divider"></div>
-      <ul class="features-list">
-        <li><span class="check">✓</span> Full E-commerce Store</li>
-        <li><span class="check">✓</span> Admin Dashboard</li>
-        <li><span class="check">✓</span> Product Management</li>
-        <li><span class="check">✓</span> WhatsApp Ordering</li>
-        <li><span class="check">✓</span> 3 Months Free Support</li>
-        <li><span class="check">✓</span> SEO + Performance</li>
-        <li><span class="check">✓</span> Priority Support</li>
-      </ul>
-      <button class="btn-plan btn-plan-ghost" onclick="window.open('https://wa.me/8801838917670?text=Hi! I want the Business plan.','_blank')">Get Business</button>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ── Skills ─────────────────────────────────────────────── -->
+  <section id="skills" style="min-height:auto;padding:60px 24px;">
+    <div class="section-label">What I Use</div>
+    <h2 class="section-title">Skills &amp; Tools</h2>
+    <div class="skills-grid">
+      <span class="skill-badge badge-v">HTML &amp; CSS</span>
+      <span class="skill-badge badge-c">JavaScript</span>
+      <span class="skill-badge badge-p">React.js</span>
+      <span class="skill-badge badge-v">GSAP Animations</span>
+      <span class="skill-badge badge-c">Responsive Design</span>
+      <span class="skill-badge badge-p">E-commerce</span>
+      <span class="skill-badge badge-v">WordPress</span>
+      <span class="skill-badge badge-c">SEO Optimization</span>
+      <span class="skill-badge badge-p">WhatsApp Integration</span>
+    </div>
+  </section>
+  <!-- ── Process Scroll Animation ──────────────────────────────────────── -->
+  <section id="process" style="min-height:auto;padding:80px 24px;">
+    <div class="section-label">Process</div>
+    <h2 class="section-title">How I Work</h2>
+    <div class="process-wrapper">
+      <div class="process-tree-container">
+        <!-- SVG Abstract Tree -->
+        <svg id="processTree" viewBox="0 0 200 500" preserveAspectRatio="xMidYMid meet">
+          <!-- Trunk -->
+          <path class="tree-trunk" d="M100,500 C105,400 95,200 100,50" stroke="var(--border)" stroke-width="3" fill="none" />
+          
+          <!-- Branches -->
+          <g class="tree-branches">
+            <path class="tree-branch" d="M102,400 C130,370 160,350 180,310" stroke="var(--border)" stroke-width="1.5" fill="none" />
+            <path class="tree-branch" d="M98,280 C60,260 30,230 20,180" stroke="var(--border)" stroke-width="1.5" fill="none" />
+            <path class="tree-branch" d="M100,160 C130,140 160,110 170,70" stroke="var(--border)" stroke-width="1.5" fill="none" />
+            <path class="tree-branch" d="M99,100 C70,80 50,50 40,20" stroke="var(--border)" stroke-width="1.5" fill="none" />
+          </g>
 
-<!-- ── Testimonials ────────────────────────────────────────── -->
-<section id="testimonials" style="min-height:auto;padding:80px 24px;">
-  <div class="section-label">Reviews</div>
-  <h2 class="section-title">What Clients Say</h2>
-  <p class="section-sub">Real feedback from real people.</p>
+          <!-- Glowing Leaves/Buds (Petal-like) -->
+          <g class="tree-leaves">
+            <!-- Branch 1 (Bottom Right) -->
+            <g class="leaf-wrapper" transform="translate(180, 310) rotate(-30)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(160, 330) rotate(-45)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(140, 350) rotate(-20)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(165, 315) rotate(-60)"><path class="tree-leaf" d="M0,0 Q2,-2 4,0 Q2,2 0,0" fill="var(--green-pop)" /></g>
+            
+            <!-- Branch 2 (Middle Left) -->
+            <g class="leaf-wrapper" transform="translate(20, 180) rotate(150)"><path class="tree-leaf" d="M0,0 Q5,-5 10,0 Q5,5 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(40, 205) rotate(160)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(60, 225) rotate(140)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(30, 190) rotate(170)"><path class="tree-leaf" d="M0,0 Q2,-2 4,0 Q2,2 0,0" fill="var(--green-mid)" /></g>
+            
+            <!-- Branch 3 (Top Right) -->
+            <g class="leaf-wrapper" transform="translate(170, 70) rotate(-40)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(150, 90) rotate(-50)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(130, 115) rotate(-30)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(160, 80) rotate(-60)"><path class="tree-leaf" d="M0,0 Q2,-2 4,0 Q2,2 0,0" fill="var(--green-mid)" /></g>
+            
+            <!-- Branch 4 (Very Top Left) -->
+            <g class="leaf-wrapper" transform="translate(40, 20) rotate(200)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(55, 40) rotate(210)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(70, 60) rotate(190)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            
+            <!-- Main Trunk / Top -->
+            <g class="leaf-wrapper" transform="translate(100, 50) rotate(-90)"><path class="tree-leaf" d="M0,0 Q6,-6 12,0 Q6,6 0,0" fill="var(--green-pop)" /></g>
+            <g class="leaf-wrapper" transform="translate(100, 80) rotate(-80)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(100, 150) rotate(-100)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(105, 250) rotate(-95)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(95, 350) rotate(-85)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+          </g>
+        </svg>
+      </div>
 
-  <div class="testimonial-grid">
-    <div class="t-card reveal">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-text">"Ittehad delivered exactly what we needed. Our online orders went up 3x within the first month of launching the new site!"</p>
-      <div class="t-author">
-        <div class="t-avatar">RS</div>
-        <div>
-          <div class="t-name">Rajib Sheikh</div>
-          <div class="t-role">E-commerce Client</div>
+      <div class="process-container" id="processTimeline">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Requirement Gathering</h3>
+            <p>Understand business goals and target audience. Identify required features and expectations.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Research & Planning</h3>
+            <p>Analyze competitors and trends. Plan site structure and choose tech stack.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Wireframing & Design</h3>
+            <p>Create layout and UI design. Ensure responsive design (mobile + desktop).</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Development</h3>
+            <p>Build frontend using HTML, CSS, JS. Integrate backend functionality if needed.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h3>Testing</h3>
+            <p>Check for bugs and errors. Ensure cross‑browser and device compatibility.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">06</div>
+          <div class="step-content">
+            <h3>Deployment</h3>
+            <p>Upload to hosting platform (e.g., Netlify). Connect domain and go live.</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="t-card reveal">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-text">"I really liked the contrast and the combination of colours. You nailed it!"</p>
-      <div class="t-author">
-        <div class="t-avatar">AF</div>
-        <div>
-          <div class="t-name">Aiman Al Fuad</div>
-          <div class="t-role">Business Website</div>
+  <!-- ── Projects ───────────────────────────────────────────── -->
+  <section id="work">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Sample Projects</h2>
+    <p class="section-sub">Hand-crafted websites delivering real business results for local brands.</p>
+    <div id="projectFilters" style="display:flex;gap:10px;justify-content:center;margin-bottom:30px;"><button
+        class="filter-btn active" data-filter="all">All</button><button class="filter-btn"
+        data-filter="e-commerce">E-Commerce</button><button class="filter-btn"
+        data-filter="business">Business</button><button class="filter-btn" data-filter="grocery">Grocery</button></div>
+
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- ── Pricing ─────────────────────────────────────────────── -->
+  <section id="pricing">
+    <div class="section-label">Transparent Pricing</div>
+    <h2 class="section-title">Available Plans</h2>
+    <p class="section-sub">One-time development fee + optional monthly maintenance to keep your site fast, secure &amp;
+      updated.</p>
+
+    <div class="pricing-grid">
+
+      <!-- Starter -->
+      <div class="price-card reveal">
+        <div class="price-tier">Starter</div>
+        <h3>Basic Business</h3>
+        <p class="price-desc">Perfect for getting your first professional online presence.</p>
+        <div class="price-amount"><span>৳</span>2,999</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
+        <div class="price-maintenance">
+          <span class="icon">🔧</span>
+          <span>Maintenance: <strong style="color:var(--accent2);">৳500/month</strong></span>
+        </div>
+        <div class="divider"></div>
+        <ul class="features-list">
+          <li><span class="check">✓</span> Up to 5 Pages</li>
+          <li><span class="check">✓</span> Mobile Responsive</li>
+          <li><span class="check">✓</span> WhatsApp Button</li>
+          <li><span class="check">✓</span> Basic Animations</li>
+          <li><span class="check">✓</span> 1 Month Free Support</li>
+          <li><span class="cross">✗</span> <span style="opacity:0.5;">E-commerce</span></li>
+          <li><span class="cross">✗</span> <span style="opacity:0.5;">Admin Panel</span></li>
+        </ul>
+        <button class="btn-plan btn-plan-ghost"
+          onclick="window.open('https://wa.me/8801838917670?text=Hi! I want the Starter plan.','_blank')">Get
+          Started</button>
+      </div>
+
+      <!-- Pro -->
+      <div class="price-card featured reveal">
+        <span class="feature-badge">POPULAR</span>
+        <div class="price-tier">Pro</div>
+        <h3>Advanced Website</h3>
+        <p class="price-desc">Stunning animations, premium design &amp; full customization.</p>
+        <div class="price-amount"><span>৳</span>6,999</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
+        <div class="price-maintenance">
+          <span class="icon">🔧</span>
+          <span>Maintenance: <strong style="color:var(--accent2);">৳1,000/month</strong></span>
+        </div>
+        <div class="divider"></div>
+        <ul class="features-list">
+          <li><span class="check">✓</span> Up to 10 Pages</li>
+          <li><span class="check">✓</span> Pro Animations (GSAP)</li>
+          <li><span class="check">✓</span> Mobile Responsive</li>
+          <li><span class="check">✓</span> WhatsApp Integration</li>
+          <li><span class="check">✓</span> Contact Form</li>
+          <li><span class="check">✓</span> SEO Optimization</li>
+          <li><span class="cross">✗</span> <span style="opacity:0.5;">Full E-commerce</span></li>
+        </ul>
+        <button class="btn-plan btn-plan-filled"
+          onclick="window.open('https://wa.me/8801838917670?text=Hi! I want the Pro plan.','_blank')">Get Pro
+          Plan</button>
+      </div>
+
+      <!-- Business -->
+      <div class="price-card reveal">
+        <div class="price-tier">Business</div>
+        <h3>Full E-commerce</h3>
+        <p class="price-desc">Complete online store with admin panel, cart &amp; ordering system.</p>
+        <div class="price-amount"><span>৳</span>14,999</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
+        <div class="price-maintenance">
+          <span class="icon">🔧</span>
+          <span>Maintenance: <strong style="color:var(--accent2);">৳2,000/month</strong></span>
+        </div>
+        <div class="divider"></div>
+        <ul class="features-list">
+          <li><span class="check">✓</span> Full E-commerce Store</li>
+          <li><span class="check">✓</span> Admin Dashboard</li>
+          <li><span class="check">✓</span> Product Management</li>
+          <li><span class="check">✓</span> WhatsApp Ordering</li>
+          <li><span class="check">✓</span> 3 Months Free Support</li>
+          <li><span class="check">✓</span> SEO + Performance</li>
+          <li><span class="check">✓</span> Priority Support</li>
+        </ul>
+        <button class="btn-plan btn-plan-ghost"
+          onclick="window.open('https://wa.me/8801838917670?text=Hi! I want the Business plan.','_blank')">Get
+          Business</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Testimonials  reset ────────────────────────────────────────── -->
+  <section id="testimonials" style="min-height:auto;padding:80px 24px;">
+    <div class="section-label">Reviews</div>
+    <h2 class="section-title">What Clients Say</h2>
+    <p class="section-sub">Real feedback from real people.</p>
+
+    <div class="testimonial-grid">
+      <div class="t-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Ittehad delivered exactly what we needed. Our online orders went up 3x within the first month
+          of launching the new site!"</p>
+        <div class="t-author">
+          <div class="t-avatar">RS</div>
+          <div>
+            <div class="t-name">Rajib Sheikh</div>
+            <div class="t-role">E-commerce Client</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Superb website! I really liked the contrast and the combination of colours. You nailed it!
+          Recommend him 100%!"</p>
+        <div class="t-author">
+          <div class="t-avatar">AF</div>
+          <div>
+            <div class="t-name">Aiman Al Fuad</div>
+            <div class="t-role">Business Website</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Fast delivery, great communication and results beyond our expectations. Our WhatsApp orders
+          tripled after launch!"</p>
+        <div class="t-author">
+          <div class="t-avatar">TK</div>
+          <div>
+            <div class="t-name">Tech Kart BD</div>
+            <div class="t-role">Pro Plan Client</div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="t-card reveal">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-text">"Fast delivery, great communication and results beyond our expectations. Our WhatsApp orders tripled after launch!"</p>
-      <div class="t-author">
-        <div class="t-avatar">TK</div>
-        <div>
-          <div class="t-name">Tech Kart BD</div>
-          <div class="t-role">Pro Plan Client</div>
-        </div>
+  <!-- ── Contact ─────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-label">Let's Talk</div>
+    <h2 class="section-title">Ready to Grow?</h2>
+    <p class="section-sub">Message me on WhatsApp or email and I'll get back to you within 24 hours.</p>
+
+    <div class="contact-card reveal">
+      <h3 style="font-size:1.3rem;margin-bottom:6px;">Get in Touch</h3>
+      <p style="color:var(--muted);font-size:0.9rem;">I'm currently taking new projects. Let's build something great
+        together.</p>
+
+      <div style="display:flex; flex-direction:column; gap:16px; margin-top:24px;">
+        <button class="btn-primary" style="width:100%;"
+          onclick="window.open('https://wa.me/8801838917670?text=Hi Ittehad! I want to discuss a website project.','_blank')">
+          <span>💬 Chat on WhatsApp</span>
+        </button>
+        <button class="btn-outline" style="width:100%; border-color: rgba(212,175,55,0.3);"
+          onclick="window.location.href='mailto:ahnafittehad24@gmail.com'">
+          <span>📧 Send a Mail</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WhatsApp FAB ────────────────────────────────────────── -->
+  <div class="whatsapp-fab" onclick="window.open('https://wa.me/8801838917670','_blank')" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 1.76.46 3.41 1.28 4.88L2 22l5.24-1.37c1.4.74 2.98 1.15 4.65 1.15 5.5 0 9.98-4.49 9.98-10.02S17.48 2.04 12 2.04zm5.02 14.28c-.21.59-1.2.1-1.63-.09-1.29-.56-2.61-1.39-4.22-3-1.61-1.61-2.43-2.92-3.0-4.21-.18-.42-.69-1.42-.09-1.63.61-.22.95.42 1.16.89.21.46.42 1.25-.09 1.76-.52.52-1.04.68-.68 1.48.36.79 1.74 2.16 2.52 2.52.79.36.95-.18 1.48-.68.52-.52 1.3-.3 1.76-.09.46.21 1.11.55 1.76 1.16.65.61.27 1.32.05 1.91z"/></svg>
+    Chat on WhatsApp
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2026 <span>Ahnaf Ittehad</span> · Built to dominate 🚀 · All rights reserved.</p>
+  </footer>
+
+  <script defer src="js/main.js"></script>
+  <script type="module">
+    import { FlowButton } from './components/ui/index.js';
+    document.querySelectorAll('.hero-btns .btn-outline').forEach(FlowButton.upgrade);
+  </script>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImg" src="" alt="">
+      <div class="modal-body">
+        <div id="modalTag" class="card-tag"
+          style="position:relative;display:inline-block;top:0;left:0;margin-bottom:10px;"></div>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <a id="modalLink" href="#" target="_blank" class="btn-primary"
+          style="display:inline-block;margin-top:20px;text-decoration:none;"><span>View Live Project</span></a>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ── Contact ─────────────────────────────────────────────── -->
-<section id="contact">
-  <div class="section-label">Let's Talk</div>
-  <h2 class="section-title">Ready to Grow?</h2>
-  <p class="section-sub">Message me on WhatsApp or email and I'll get back to you within 24 hours.</p>
-
-  <div class="contact-card reveal">
-    <h3 style="font-size:1.3rem;margin-bottom:6px;">Get in Touch</h3>
-    <p style="color:var(--muted);font-size:0.9rem;">I'm currently taking new projects. Let's build something great together.</p>
-
-    
-    <!-- Contact Form -->
-    <form id="contactForm" style="margin-top:24px; display:flex; flex-direction:column; gap:16px;">
-      <input type="text" id="cfName" placeholder="Your Name" required style="padding:12px 16px; border-radius:8px; border:1px solid rgba(212,175,55,0.3); background:rgba(0,0,0,0.3); color:#fff; outline:none; transition:0.3s;" onfocus="this.style.borderColor='var(--accent2)'; this.style.boxShadow='0 0 10px var(--glow1)'" onblur="this.style.borderColor='rgba(212,175,55,0.3)'; this.style.boxShadow='none'">
-      <input type="email" id="cfEmail" placeholder="Your Email" required style="padding:12px 16px; border-radius:8px; border:1px solid rgba(212,175,55,0.3); background:rgba(0,0,0,0.3); color:#fff; outline:none; transition:0.3s;" onfocus="this.style.borderColor='var(--accent2)'; this.style.boxShadow='0 0 10px var(--glow1)'" onblur="this.style.borderColor='rgba(212,175,55,0.3)'; this.style.boxShadow='none'">
-      <textarea id="cfMsg" rows="4" placeholder="Your Message" required style="padding:12px 16px; border-radius:8px; border:1px solid rgba(212,175,55,0.3); background:rgba(0,0,0,0.3); color:#fff; outline:none; transition:0.3s; resize:vertical;" onfocus="this.style.borderColor='var(--accent2)'; this.style.boxShadow='0 0 10px var(--glow1)'" onblur="this.style.borderColor='rgba(212,175,55,0.3)'; this.style.boxShadow='none'"></textarea>
-      <button type="submit" id="cfSubmit" class="btn-primary" style="width:100%;"><span>Send Message</span></button>
-      <div id="cfFeedback" style="font-size:0.85rem; display:none; text-align:center;"></div>
-    </form>
-    
-    <div style="text-align:center; margin: 24px 0; color:var(--muted); font-size:0.85rem; position:relative;">
-      <span style="background:var(--card); padding:0 10px; z-index:1; position:relative;">Or contact directly</span>
-      <div style="position:absolute; top:50%; left:0; width:100%; height:1px; background:rgba(212,175,55,0.15); z-index:0;"></div>
-    </div>
-    
-    <div class="contact-links">
-      <a class="contact-link" href="https://wa.me/8801838917670" target="_blank">
-        <div class="contact-icon ci-wa">💬</div>
-        <div>
-          <div class="contact-link-label">WhatsApp (Fastest)</div>
-          <div class="contact-link-val">+8801838917670</div>
-        </div>
-        <div style="margin-left:auto;color:var(--muted);font-size:1.2rem;">→</div>
-      </a>
-
-      <a class="contact-link" href="mailto:ahnafittehad24@gmail.com">
-        <div class="contact-icon ci-em">📧</div>
-        <div>
-          <div class="contact-link-label">Email</div>
-          <div class="contact-link-val">ahnafittehad24@gmail.com</div>
-        </div>
-        <div style="margin-left:auto;color:var(--muted);font-size:1.2rem;">→</div>
-      </a>
-    </div>
-
-    <button class="btn-primary" style="width:100%;margin-top:24px;" onclick="window.open('https://wa.me/8801838917670?text=Hi Ittehad! I want to discuss a website project.','_blank')">
-      <span>💬 Chat on WhatsApp</span>
-    </button>
-  </div>
-</section>
-
-<!-- ── WhatsApp FAB ────────────────────────────────────────── -->
-<div class="whatsapp-fab" onclick="window.open('https://wa.me/8801838917670','_blank')" title="Chat on WhatsApp">💬</div>
-
-<!-- ── Footer ─────────────────────────────────────────────── -->
-<footer>
-  <p>© 2026 <span>Ahnaf Ittehad</span> · Built to dominate 🚀 · All rights reserved.</p>
-</footer>
-
-<script defer src="js/main.js"></script>
-
-<!-- Project Modal -->
-<div id="projectModal" class="project-modal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <img id="modalImg" src="" alt="">
-    <div class="modal-body">
-      <div id="modalTag" class="card-tag" style="position:relative;display:inline-block;top:0;left:0;margin-bottom:10px;"></div>
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <a id="modalLink" href="#" target="_blank" class="btn-primary" style="display:inline-block;margin-top:20px;text-decoration:none;"><span>View Live Project</span></a>
-    </div>
-  </div>
-</div>
 
 </body>
+
 </html>
