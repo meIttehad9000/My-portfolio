@@ -1,0 +1,99 @@
+/* ── FlowButton ──────────────────────────────────────────── */
+.flow-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 100px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  padding: 13px 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition:
+    border-color 600ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 400ms,
+    border-radius 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flow-btn:hover {
+  border-color: transparent;
+  color: var(--bg);
+  border-radius: 12px;
+}
+
+.flow-btn:active {
+  transform: scale(0.96);
+}
+
+/* Left arrow – slides in from off-screen */
+.flow-btn__arrow-l {
+  position: absolute;
+  left: -28px;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+  transition: left 800ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.flow-btn:hover .flow-btn__arrow-l {
+  left: 14px;
+}
+
+/* Label text */
+.flow-btn__text {
+  position: relative;
+  z-index: 2;
+  transform: translateX(-10px);
+  transition: transform 800ms ease-out;
+  white-space: nowrap;
+}
+
+.flow-btn:hover .flow-btn__text {
+  transform: translateX(10px);
+}
+
+/* Expanding circle fill */
+.flow-btn__fill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: var(--green-pop);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+  transition:
+    width 800ms cubic-bezier(0.19, 1, 0.22, 1),
+    height 800ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 600ms;
+  pointer-events: none;
+}
+
+.flow-btn:hover .flow-btn__fill {
+  width: 320px;
+  height: 320px;
+  opacity: 1;
+}
+
+/* Right arrow – slides out off-screen */
+.flow-btn__arrow-r {
+  position: absolute;
+  right: 14px;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+  transition: right 800ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.flow-btn:hover .flow-btn__arrow-r {
+  right: -28px;
+}
