@@ -1,25 +1,33 @@
-/* ── Cursor glow ─────────────────────────────────────── */
+/* ── Premium Velocity Cursor ─────────────────────────────── */
 const glow = document.getElementById('cursorGlow');
-document.addEventListener('mousemove', e => {
-  glow.style.left = e.clientX + 'px';
-  glow.style.top  = e.clientY + 'px';
-});
+if (glow) {
+  // Use GSAP's quickTo for high-performance physics tracking
+  const xTo = gsap.quickTo(glow, "left", { duration: 0.1, ease: "power3" });
+  const yTo = gsap.quickTo(glow, "top", { duration: 0.1, ease: "power3" });
+  const rotateTo = gsap.quickTo(glow, "rotation", { duration: 0.4, ease: "power3.out" });
 
-// Add a few floating accent shapes to the hero for subtle motion
-(function addShapes(){
-  const hero = document.querySelector('.hero');
-  if(!hero) return;
-  for(let i=0;i<6;i++){
-    const s = document.createElement('div');
-    s.className = 'accent-shape';
-    s.style.left = (10 + Math.random()*80) + '%';
-    s.style.top = (20 + Math.random()*60) + '%';
-    s.style.background = i % 2 === 0 ? 'linear-gradient(180deg, rgba(212,175,55,0.95), rgba(255,209,102,0.6))' : 'rgba(255,209,102,0.85)';
-    s.style.animationDelay = (Math.random()*4) + 's';
-    s.style.width = s.style.height = (6 + Math.random()*12) + 'px';
-    hero.appendChild(s);
-  }
-})();
+  let lastX = 0;
+  
+  // Set initial fixed translation offset because we removed it from CSS
+  gsap.set(glow, { xPercent: -15, yPercent: -15 });
+
+  document.addEventListener('mousemove', e => {
+    xTo(e.clientX);
+    yTo(e.clientY);
+
+    // Calculate horizontal velocity to sway the branch
+    const deltaX = e.clientX - lastX;
+    lastX = e.clientX;
+
+    // Clamp rotation angle to prevent violent spinning
+    const speed = Math.max(-45, Math.min(45, deltaX * 0.8));
+    rotateTo(speed);
+  });
+
+  // Softly return the branch to resting position when mouse stops
+  setInterval(() => { rotateTo(0); }, 150);
+  window.addEventListener('scroll', () => { rotateTo(0); });
+}
 
 /* ── Header shrink on scroll ─────────────────────────── */
 window.addEventListener('scroll', () => {
@@ -65,7 +73,7 @@ heroTl
 /* for a subtle slide-up entrance effect only.                     */
 (function() {
   const selectors = [
-    '.card', '.price-card', '.t-card', '.contact-card', '.skill-badge'
+    '.card', '.price-card', '.t-card', '.contact-card', '.skill-badge', '.flashcard'
   ];
 
   const allEls = [];
@@ -76,8 +84,8 @@ heroTl
     });
   });
 
-  // Stagger delay within grid parents
-  document.querySelectorAll('.projects-grid, .pricing-grid, .testimonial-grid, .skills-grid').forEach(parent => {
+  // Stagger delay within grid parents and flashcards deck
+  document.querySelectorAll('.projects-grid, .pricing-grid, .testimonial-grid, .skills-grid, .flashcards-deck').forEach(parent => {
     Array.from(parent.children).forEach((child, i) => {
       child.dataset.aoDelay = i;
     });
@@ -96,27 +104,7 @@ heroTl
     }, { threshold: 0.05 });
     allEls.forEach(el => io.observe(el));
   }
-  // If no IntersectionObserver (shouldn't happen), elements stay visible with no animation — that's fine.
 })();
-
-/* ── Particles ────────────────────────────────────────── */
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 70, density: { enable: true, value_area: 900 } },
-    color:  { value: ["#d4af37", "#ffd700", "#ffcf66"] },
-    shape:  { type: "circle" },
-    opacity:{ value: 0.4, random: true, anim: { enable: true, speed: 0.6, opacity_min: 0.1 } },
-    size:   { value: 2.5, random: true },
-    line_linked: { enable: true, distance: 140, color: "#d4af37", opacity: 0.10, width: 1 },
-    move:   { enable: true, speed: 1.2, direction: "none", random: true, out_mode: "out" }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "repulse" } },
-    modes:  { grab: { distance: 160, line_linked: { opacity: 0.28 } }, repulse: { distance: 160, duration: 0.6 }, push: { particles_nb: 3 } }
-  },
-  retina_detect: true
-});
 
 window.addEventListener('scroll', () => {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -225,63 +213,194 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-const contactForm = document.getElementById('contactForm');
-if(contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = document.getElementById('cfSubmit');
-    const feedback = document.getElementById('cfFeedback');
-    
-    // Basic Sanitize/Validation (prevent XSS in local echo if any)
-    const name = document.getElementById('cfName').value.trim().replace(/</g, "&lt;");
-    const email = document.getElementById('cfEmail').value.trim().replace(/</g, "&lt;");
-    const msg = document.getElementById('cfMsg').value.trim().replace(/</g, "&lt;");
-    
-    if(!name || !email || !msg) return;
-    
-    // Spam bot check
-    if(msg.includes('http://') && msg.includes('buy')) {
-      feedback.style.display = 'block';
-      feedback.style.color = '#ff4444';
-      feedback.innerText = 'Spam detected. Message blocked.';
-      return;
+// --- Process Scroll Animations ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Reveal Process timeline steps
+    const processSteps = gsap.utils.toArray('.process-step');
+    if (processSteps.length > 0) {
+        processSteps.forEach((step, i) => {
+            gsap.fromTo(step, 
+                { y: 50, opacity: 0 },
+                {
+                    y: 0, 
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: step,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+        });
     }
+
+    // --- Premium Project Card Image Parallax ---
+    const projectCards = gsap.utils.toArray('.card');
+    projectCards.forEach(card => {
+        const img = card.querySelector('img');
+        if (img) {
+            gsap.fromTo(img, 
+                { yPercent: -15, scale: 1.15 }, 
+                {
+                    yPercent: 15,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                }
+            );
+        }
+    });
+
+    // --- Abstract Tree Growth (Scroll) ---
+    const treePaths = gsap.utils.toArray('.tree-trunk, .tree-branch');
+    const leafWrappers = gsap.utils.toArray('.leaf-wrapper');
     
-    btn.innerHTML = '<span>Sending... ⏳</span>';
-    btn.disabled = true;
-    feedback.style.display = 'none';
-    
-    try {
-      const resp = await fetch('/.netlify/functions/contact', {
-        method: 'POST',
-        body: JSON.stringify({ name, email, msg })
-      });
-      
-      if(resp.ok) {
-        btn.innerHTML = '<span>Message Sent! ✅</span>';
-        btn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
-        contactForm.reset();
-        setTimeout(() => {
-          btn.innerHTML = '<span>Send Message</span>';
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 5000);
-      } else {
-        throw new Error('Server error');
-      }
-    } catch(err) {
-      console.warn('Backend function unreachable - Simulating success for preview');
-      // For local html testing without Netlify dev server
-      setTimeout(() => {
-        btn.innerHTML = '<span>Message Sent! ✅</span>';
-        btn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
-        contactForm.reset();
-        setTimeout(() => {
-          btn.innerHTML = '<span>Send Message</span>';
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 5000);
-      }, 1200);
+    if (treePaths.length > 0 || leafWrappers.length > 0) {
+        // Setup hidden initial states for drawing
+        gsap.set(treePaths, { strokeDasharray: 1000, strokeDashoffset: 1000 });
+        gsap.set(leafWrappers, { scale: 0, opacity: 0, transformOrigin: "center center" });
+        
+        // Coordinated scroll timeline
+        const growTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#processTimeline',
+                start: 'top 80%',
+                end: 'bottom 40%',
+                scrub: 1
+            }
+        });
+
+        // 1. Grow trunk and branches sequentially
+        growTl.to(treePaths, {
+            strokeDashoffset: 0,
+            stagger: 0.15,
+            ease: "power2.out",
+            duration: 2
+        }, 0);
+
+        // 2. Pop leaves sequentially shortly after branch growth starts
+        growTl.to(leafWrappers, {
+            scale: 1,
+            opacity: 1,
+            stagger: 0.1,
+            ease: "back.out(1.5)",
+            duration: 1
+        }, 0.5);
     }
-  });
+
+    // --- Abstract Tree Animation Loop ---
+    const treeLeaves = gsap.utils.toArray('.tree-leaf');
+    if (treeLeaves.length > 0) {
+        // Master ambient timeline for continuous soft loop
+        const treeTl = gsap.timeline({ repeat: -1, yoyo: true });
+        
+        // Softly pulse the leaves (opacity and slight scale)
+        treeTl.to(treeLeaves, {
+            scale: 1.3,
+            opacity: 0.4,
+            duration: 3,
+            ease: "sine.inOut",
+            stagger: {
+                each: 0.4,
+                yoyo: true,
+                repeat: -1
+            },
+            transformOrigin: "center center"
+        });
+
+        // Scroll velocity deceleration logic
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            // Immediately slow down ambient loop to a crawl
+            gsap.to(treeTl, { timeScale: 0.15, duration: 0.5, overwrite: "auto" });
+            
+            clearTimeout(scrollTimeout);
+            // Resume normal ambient pace after scrolling stops
+            scrollTimeout = setTimeout(() => {
+                gsap.to(treeTl, { timeScale: 1, duration: 1.5, overwrite: "auto" });
+            }, 200);
+        }, { passive: true });
+    }
+
+    // Hide floating WhatsApp button when reaching the bottom (Contact section)
+    const fab = document.querySelector('.whatsapp-fab');
+    if (fab) {
+        // Add a clean transition for the FAB opacity
+        fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease';
+        
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const bodyHeight = document.documentElement.scrollHeight;
+            
+            // If within 400px of the bottom
+            if (bodyHeight - scrollPosition < 400) {
+                fab.style.opacity = '0';
+                fab.style.pointerEvents = 'none';
+            } else {
+                fab.style.opacity = '1';
+                fab.style.pointerEvents = 'all';
+            }
+        });
+    }
+});
+
+/* ── Falling Petals (Matcha Theme) ────────────────────────── */
+function createLeaf() {
+    const container = document.getElementById('leaves-container');
+    if (!container) return;
+    
+    const leaf = document.createElement('div');
+    leaf.classList.add('falling-leaf');
+    
+    // Randomize leaf properties
+    const size = Math.random() * 12 + 8; // 8px to 20px
+    leaf.style.width = `${size}px`;
+    leaf.style.height = `${size}px`;
+    leaf.style.left = `${Math.random() * 100}vw`; // Random horizontal start
+    
+    const duration = Math.random() * 6 + 6; // 6s to 12s falling down
+    const swayDuration = Math.random() * 2 + 2; 
+    
+    leaf.style.animationDuration = `${duration}s, ${swayDuration}s`;
+    leaf.style.animationDelay = `0s, -${Math.random() * 2}s`;
+    
+    const op = Math.random() * 0.3 + 0.1;
+    leaf.style.opacity = op;
+
+    container.appendChild(leaf);
+    
+    // Remove leaf after it falls off screen
+    setTimeout(() => {
+        if(leaf.parentNode) leaf.remove();
+    }, duration * 1000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Generate a leaf periodically
+    setInterval(createLeaf, 500);
+
+    // Initial burst to populate screen
+    for(let i=0; i<20; i++) {
+        setTimeout(() => {
+            const leaf = document.createElement('div');
+            leaf.classList.add('falling-leaf');
+            leaf.style.width = `${Math.random() * 12 + 8}px`;
+            leaf.style.height = leaf.style.width;
+            leaf.style.left = `${Math.random() * 100}vw`;
+            leaf.style.top = `${Math.random() * 100}vh`; // spawn on screen
+            
+            const duration = Math.random() * 6 + 6;
+            leaf.style.animationDuration = `${duration}s, ${Math.random() * 2 + 2}s`;
+            leaf.style.opacity = Math.random() * 0.3 + 0.1;
+            
+            document.getElementById('leaves-container')?.appendChild(leaf);
+            setTimeout(() => { if(leaf.parentNode) leaf.remove(); }, duration * 1000);
+        }, Math.random() * 1500);
+    }
+});
