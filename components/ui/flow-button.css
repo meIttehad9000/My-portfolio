@@ -97,3 +97,51 @@
 .flow-btn:hover .flow-btn__arrow-r {
   right: -28px;
 }
+
+/* ── Overrides when existing button classes are upgraded ── */
+.btn-primary.flow-btn,
+.btn-outline.flow-btn,
+.btn-plan.flow-btn {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 100px;
+  color: var(--text-primary);
+  transform: none;
+  transition:
+    border-color 600ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 400ms,
+    border-radius 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-primary.flow-btn,
+.btn-outline.flow-btn {
+  border: 1.5px solid var(--border);
+}
+
+/* ghost plan buttons keep their existing border colour */
+.btn-plan-ghost.flow-btn {
+  border: 1.5px solid var(--border) !important;
+}
+
+/* filled plan buttons start with a green-pop border */
+.btn-plan-filled.flow-btn {
+  border: 1.5px solid var(--green-pop) !important;
+  color: var(--green-pop);
+}
+
+.btn-plan-filled.flow-btn .flow-btn__fill {
+  background: var(--green-pop);
+}
+
+.btn-primary.flow-btn:hover,
+.btn-outline.flow-btn:hover,
+.btn-plan-ghost.flow-btn:hover,
+.btn-plan-filled.flow-btn:hover {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--bg);
+  border-radius: 12px;
+  box-shadow: none;
+  transform: none;
+}
+
