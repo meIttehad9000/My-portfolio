@@ -4,24 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahnaf Ittehad | Premium Web Developer</title>
+  <title>Ahnaf Ittehad | AI Web Developer</title>
   <meta name="description"
-    content="Ahnaf Ittehad – Premium web developer helping local businesses grow online with stunning websites and animations.">
-  <meta property="og:title" content="Ahnaf Ittehad | Premium Web Developer">
+    content="Ahnaf Ittehad is an AI Web Developer building high-performance websites and e-commerce experiences for local businesses.">
+  <link rel="canonical" href="https://ahnafittehad.com/">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A0A0A'/%3E%3Cpath d='M17 47L29 17h6l12 30h-7l-2.3-6.4H26.2L24 47h-7zm11.3-12.2h7.4L32 24.2l-3.7 10.6z' fill='%23E8503A'/%3E%3C/svg%3E">
+  <meta property="og:title" content="Ahnaf Ittehad | AI Web Developer">
   <meta property="og:description"
-    content="Helping local businesses dominate online with stunning websites and animations.">
+    content="Ahnaf Ittehad is an AI Web Developer building high-performance websites and e-commerce experiences for local businesses.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ahnafittehad.com/">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ahnaf Ittehad portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ahnaf Ittehad | Premium Web Developer">
-  <meta name="twitter:description" content="Premium web developer for local businesses.">
+  <meta name="twitter:title" content="Ahnaf Ittehad | AI Web Developer">
+  <meta name="twitter:description"
+    content="Ahnaf Ittehad is an AI Web Developer building high-performance websites and e-commerce experiences for local businesses.">
+  <meta name="twitter:image"
+    content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ahnaf Ittehad",
     "url": "https://ahnafittehad.com/",
-    "jobTitle": "AI Powered Web Developer"
+    "jobTitle": "AI Web Developer"
   }
   </script>
 
@@ -31,21 +42,20 @@
     rel="stylesheet">
 
   <!-- Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="components/ui/flow-button.css">
 </head>
-
 <body>
   <!-- Intro Animation -->
   <div id="introOverlay" class="intro-overlay">
     <div class="intro-text">
-      <span class="welcome-word">Welcome</span> 
+      <span class="welcome-word">Welcome</span>
       <span class="partner-word">Partner</span>
       <svg class="welcome-leaf" viewBox="0 0 24 24" width="48" height="48">
-        <path fill="currentColor" d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
+        <path fill="currentColor"
+          d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
       </svg>
     </div>
   </div>
@@ -62,12 +72,30 @@
   <!-- ── Header ─────────────────────────────────────────────── -->
   <header id="site-header">
     <div class="logo">Ittehad</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#work">Work</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="nav-cta">Hire Me →</a>
-    </nav>
+    <div class="header-right">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
   </header>
 
   <!-- ── Hero ──────────────────────────────────────────────── -->
@@ -78,8 +106,8 @@
     </div>
 
     <h1>
-      Lets Build <span class="line-grad">Something</span><br>
-      That is <span class="line-grad">Worth </span>Visiting.
+      Let's Build <span class="line-grad">Something</span><br>
+      That's <span class="line-grad">Worth </span>Visiting
     </h1>
 
     <div class="typed-wrapper">
@@ -87,18 +115,21 @@
     </div>
 
     <p class="hero-desc">
-      Studying CSE at Green University Of Bangladesh. 🎓<br>Helping local businesses dominate online with stunning
-      websites and real results. 🚀
+      Hi, I'm Ahnaf Ittehad!<br>
+      I specialize in helping local businesses bring their ideas to life through modern, high-performance web experiences.<br>
+      Whether you need a dynamic landing page or a full e-commerce system, I'll make sure your online presence truly stands out. 🚀
     </p>
 
     <div class="hero-btns">
-      <button class="btn-primary" onclick="location='#pricing'"><span>See Pricing</span></button>
-      <button class="btn-outline" onclick="location='#work'">View Work</button>
+      <button class="btn-primary"
+        onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Pricing</button>
+      <button class="btn-outline" onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})">View
+        Work</button>
     </div>
 
     <div class="stats-strip">
       <div class="stat">
-        <div class="num" id="c1">20+</div>
+        <div class="num" id="c1">40+</div>
         <div class="label">Projects Delivered</div>
       </div>
       <div class="stat">
@@ -110,7 +141,7 @@
         <div class="label">Experience</div>
       </div>
       <div class="stat">
-        <div class="num">48h</div>
+        <div class="num">24h</div>
         <div class="label">Avg. Response</div>
       </div>
     </div>
@@ -121,15 +152,15 @@
     <div class="section-label">What I Use</div>
     <h2 class="section-title">Skills &amp; Tools</h2>
     <div class="skills-grid">
-      <span class="skill-badge badge-v">HTML &amp; CSS</span>
-      <span class="skill-badge badge-c">JavaScript</span>
-      <span class="skill-badge badge-p">React.js</span>
       <span class="skill-badge badge-v">GSAP Animations</span>
-      <span class="skill-badge badge-c">Responsive Design</span>
+      <span class="skill-badge badge-p">WhatsApp Integration</span>
       <span class="skill-badge badge-p">E-commerce</span>
+      <span class="skill-badge badge-p">React.js</span>
+      <span class="skill-badge badge-c">JavaScript</span>
+      <span class="skill-badge badge-v">HTML &amp; CSS</span>
       <span class="skill-badge badge-v">WordPress</span>
       <span class="skill-badge badge-c">SEO Optimization</span>
-      <span class="skill-badge badge-p">WhatsApp Integration</span>
+      <span class="skill-badge badge-c">Responsive Design</span>
     </div>
   </section>
   <!-- ── Process Scroll Animation ──────────────────────────────────────── -->
@@ -141,47 +172,133 @@
         <!-- SVG Abstract Tree -->
         <svg id="processTree" viewBox="0 0 200 500" preserveAspectRatio="xMidYMid meet">
           <!-- Trunk -->
-          <path class="tree-trunk" d="M100,500 C105,400 95,200 100,50" stroke="var(--border)" stroke-width="3" fill="none" />
-          
+          <path class="tree-trunk" d="M100,500 C105,400 95,200 100,50" stroke="var(--border)" stroke-width="3"
+            fill="none" />
+
           <!-- Branches -->
           <g class="tree-branches">
-            <path class="tree-branch" d="M102,400 C130,370 160,350 180,310" stroke="var(--border)" stroke-width="1.5" fill="none" />
-            <path class="tree-branch" d="M98,280 C60,260 30,230 20,180" stroke="var(--border)" stroke-width="1.5" fill="none" />
-            <path class="tree-branch" d="M100,160 C130,140 160,110 170,70" stroke="var(--border)" stroke-width="1.5" fill="none" />
-            <path class="tree-branch" d="M99,100 C70,80 50,50 40,20" stroke="var(--border)" stroke-width="1.5" fill="none" />
+            <path class="tree-branch" d="M102,400 C130,370 160,350 180,310" stroke="var(--border)" stroke-width="1.5"
+              fill="none" />
+            <path class="tree-branch" d="M98,280 C60,260 30,230 20,180" stroke="var(--border)" stroke-width="1.5"
+              fill="none" />
+            <path class="tree-branch" d="M100,160 C130,140 160,110 170,70" stroke="var(--border)" stroke-width="1.5"
+              fill="none" />
+            <path class="tree-branch" d="M99,100 C70,80 50,50 40,20" stroke="var(--border)" stroke-width="1.5"
+              fill="none" />
           </g>
 
-          <!-- Glowing Leaves/Buds (Petal-like) -->
+          <!-- Warm micro-leaves keep the process tree airy while adding life. -->
           <g class="tree-leaves">
-            <!-- Branch 1 (Bottom Right) -->
-            <g class="leaf-wrapper" transform="translate(180, 310) rotate(-30)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(160, 330) rotate(-45)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
-            <g class="leaf-wrapper" transform="translate(140, 350) rotate(-20)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
-            <g class="leaf-wrapper" transform="translate(165, 315) rotate(-60)"><path class="tree-leaf" d="M0,0 Q2,-2 4,0 Q2,2 0,0" fill="var(--green-pop)" /></g>
-            
-            <!-- Branch 2 (Middle Left) -->
-            <g class="leaf-wrapper" transform="translate(20, 180) rotate(150)"><path class="tree-leaf" d="M0,0 Q5,-5 10,0 Q5,5 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(40, 205) rotate(160)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(60, 225) rotate(140)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
-            <g class="leaf-wrapper" transform="translate(30, 190) rotate(170)"><path class="tree-leaf" d="M0,0 Q2,-2 4,0 Q2,2 0,0" fill="var(--green-mid)" /></g>
-            
-            <!-- Branch 3 (Top Right) -->
-            <g class="leaf-wrapper" transform="translate(170, 70) rotate(-40)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(150, 90) rotate(-50)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(130, 115) rotate(-30)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
-            <g class="leaf-wrapper" transform="translate(160, 80) rotate(-60)"><path class="tree-leaf" d="M0,0 Q2,-2 4,0 Q2,2 0,0" fill="var(--green-mid)" /></g>
-            
-            <!-- Branch 4 (Very Top Left) -->
-            <g class="leaf-wrapper" transform="translate(40, 20) rotate(200)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(55, 40) rotate(210)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(70, 60) rotate(190)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
-            
-            <!-- Main Trunk / Top -->
-            <g class="leaf-wrapper" transform="translate(100, 50) rotate(-90)"><path class="tree-leaf" d="M0,0 Q6,-6 12,0 Q6,6 0,0" fill="var(--green-pop)" /></g>
-            <g class="leaf-wrapper" transform="translate(100, 80) rotate(-80)"><path class="tree-leaf" d="M0,0 Q4,-4 8,0 Q4,4 0,0" fill="var(--green-mid)" /></g>
-            <g class="leaf-wrapper" transform="translate(100, 150) rotate(-100)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
-            <g class="leaf-wrapper" transform="translate(105, 250) rotate(-95)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
-            <g class="leaf-wrapper" transform="translate(95, 350) rotate(-85)"><path class="tree-leaf" d="M0,0 Q3,-3 6,0 Q3,3 0,0" fill="var(--green-mid)" /></g>
+            <g class="leaf-wrapper" transform="translate(176,312) rotate(-34)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="3.2" ry="2.4" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(166,326) rotate(-48)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach tree-leaf-drift" cx="0" cy="0" rx="2.9" ry="2.2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(158,338) rotate(-42)">
+              <circle class="tree-leaf tree-leaf-tone-yellow" cx="0" cy="0" r="2.6" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(146,356) rotate(-25)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.8" ry="2.1" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(132,372) rotate(-14)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.4" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(154,348) rotate(-58)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="2.5" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(112,402) rotate(-92)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.2" ry="1.8" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(90,384) rotate(-84)">
+              <ellipse class="tree-leaf tree-leaf-tone-yellow" cx="0" cy="0" rx="2.1" ry="1.7" />
+            </g>
+
+            <g class="leaf-wrapper" transform="translate(22,176) rotate(170)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="3" ry="2.2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(28,188) rotate(158)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.7" ry="2.1" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(36,196) rotate(148)">
+              <circle class="tree-leaf tree-leaf-tone-yellow tree-leaf-drift" cx="0" cy="0" r="2.4" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(42,208) rotate(144)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.8" ry="2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(56,224) rotate(132)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="2.5" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(64,238) rotate(124)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.6" ry="2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(76,250) rotate(116)">
+              <ellipse class="tree-leaf tree-leaf-tone-yellow" cx="0" cy="0" rx="2.3" ry="1.8" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(84,214) rotate(-12)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.4" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(96,220) rotate(-88)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="2.6" ry="2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(100,258) rotate(-94)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.5" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(108,286) rotate(-96)">
+              <ellipse class="tree-leaf tree-leaf-tone-yellow" cx="0" cy="0" rx="2.4" ry="1.8" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(118,180) rotate(-74)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.2" ry="1.7" />
+            </g>
+
+            <g class="leaf-wrapper" transform="translate(172,66) rotate(-40)">
+              <ellipse class="tree-leaf tree-leaf-tone-red tree-leaf-drift" cx="0" cy="0" rx="3.1" ry="2.3" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(166,74) rotate(-46)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.8" ry="2.1" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(160,86) rotate(-62)">
+              <ellipse class="tree-leaf tree-leaf-tone-yellow" cx="0" cy="0" rx="2.6" ry="2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(154,90) rotate(-56)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.5" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(144,104) rotate(-35)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="2.7" ry="2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(132,122) rotate(-26)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.4" ry="1.8" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(38,18) rotate(214)">
+              <ellipse class="tree-leaf tree-leaf-tone-yellow tree-leaf-drift" cx="0" cy="0" rx="2.7" ry="2" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(44,24) rotate(202)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="2.8" ry="2.1" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(56,38) rotate(210)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.5" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(68,54) rotate(194)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.4" ry="1.8" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(76,68) rotate(182)">
+              <ellipse class="tree-leaf tree-leaf-tone-yellow" cx="0" cy="0" rx="2.3" ry="1.8" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(100,52) rotate(-90)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="3.4" ry="2.6" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(104,68) rotate(-82)">
+              <ellipse class="tree-leaf tree-leaf-tone-peach" cx="0" cy="0" rx="2.8" ry="2.1" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(96,82) rotate(-98)">
+              <ellipse class="tree-leaf tree-leaf-tone-gray" cx="0" cy="0" rx="2.6" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(108,110) rotate(-76)">
+              <ellipse class="tree-leaf tree-leaf-tone-yellow" cx="0" cy="0" rx="2.5" ry="1.9" />
+            </g>
+            <g class="leaf-wrapper" transform="translate(92,126) rotate(-108)">
+              <ellipse class="tree-leaf tree-leaf-tone-red" cx="0" cy="0" rx="2.4" ry="1.8" />
+            </g>
           </g>
         </svg>
       </div>
@@ -226,7 +343,7 @@
           <div class="step-num">06</div>
           <div class="step-content">
             <h3>Deployment</h3>
-            <p>Upload to hosting platform (e.g., Netlify). Connect domain and go live.</p>
+            <p>Upload to hosting platform (e.g., Vercel). Connect domain and go live.</p>
           </div>
         </div>
       </div>
@@ -260,11 +377,13 @@
         <div class="price-tier">Starter</div>
         <h3>Basic Business</h3>
         <p class="price-desc">Perfect for getting your first professional online presence.</p>
-        <div class="price-amount"><span>৳</span>2,999</div>
+        <div class="discount-badge">50% OFF</div>
+        <div class="price-original"><span>৳</span>9,999</div>
+        <div class="price-amount"><span>৳</span>4,999</div>
         <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
         <div class="price-maintenance">
           <span class="icon">🔧</span>
-          <span>Maintenance: <strong style="color:var(--accent2);">৳500/month</strong></span>
+          <span>Maintenance: <strong style="color:var(--accent2);">৳499/month</strong></span>
         </div>
         <div class="divider"></div>
         <ul class="features-list">
@@ -287,11 +406,13 @@
         <div class="price-tier">Pro</div>
         <h3>Advanced Website</h3>
         <p class="price-desc">Stunning animations, premium design &amp; full customization.</p>
-        <div class="price-amount"><span>৳</span>6,999</div>
+        <div class="discount-badge">50% OFF</div>
+        <div class="price-original"><span>৳</span>19,999</div>
+        <div class="price-amount"><span>৳</span>9,999</div>
         <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
         <div class="price-maintenance">
           <span class="icon">🔧</span>
-          <span>Maintenance: <strong style="color:var(--accent2);">৳1,000/month</strong></span>
+          <span>Maintenance: <strong style="color:var(--accent2);">৳999/month</strong></span>
         </div>
         <div class="divider"></div>
         <ul class="features-list">
@@ -313,11 +434,13 @@
         <div class="price-tier">Business</div>
         <h3>Full E-commerce</h3>
         <p class="price-desc">Complete online store with admin panel, cart &amp; ordering system.</p>
-        <div class="price-amount"><span>৳</span>14,999</div>
+        <div class="discount-badge">50% OFF</div>
+        <div class="price-original"><span>৳</span>37,999</div>
+        <div class="price-amount"><span>৳</span>18,999</div>
         <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px;">one-time</div>
         <div class="price-maintenance">
           <span class="icon">🔧</span>
-          <span>Maintenance: <strong style="color:var(--accent2);">৳2,000/month</strong></span>
+          <span>Maintenance: <strong style="color:var(--accent2);">৳1,999/month</strong></span>
         </div>
         <div class="divider"></div>
         <ul class="features-list">
@@ -337,6 +460,55 @@
     </div>
   </section>
 
+  <!-- ── FAQ Section ────────────────────────────────────────── -->
+  <section id="faq" style="min-height:auto;padding:80px 24px;">
+    <div class="section-label">Common Questions</div>
+    <h2 class="section-title">Frequently Asked</h2>
+    <p class="section-sub">Everything you need to know about working together.</p>
+
+    <div class="faq-accordion reveal">
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span>How long does it take to build a website?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Most projects are completed within 1–3 weeks depending on complexity. A basic landing page takes about 5-7 days, while a full e-commerce store requires 2-3 weeks including testing and population of your initial products.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span>Is the website mobile-friendly?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Absolutely. Every site I build is "Mobile-First," meaning it's designed to look and work perfectly on smartphones, tablets, and desktop monitors alike. Over 70% of local traffic in Bangladesh comes from mobile devices, so this is my top priority.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span>Can I update the content myself?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Yes! For E-commerce (Business plan), you get a full Admin Dashboard to manage products and orders. For Starter/Pro plans, I build them such that common text and images are easy to edit, or you can opt for my affordable monthly maintenance to handle all updates for you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span>Do you provide hosting and domains?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Yes, I provide hosting and domain setup services. I assist you in purchasing your domain (e.g., .com, .com.bd) and setting up high-performance hosting. I recommend providers like Vercel or Premium local servers to ensure your site stays fast and secure for your customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Testimonials  reset ────────────────────────────────────────── -->
   <section id="testimonials" style="min-height:auto;padding:80px 24px;">
     <div class="section-label">Reviews</div>
@@ -349,7 +521,13 @@
         <p class="t-text">"Ittehad delivered exactly what we needed. Our online orders went up 3x within the first month
           of launching the new site!"</p>
         <div class="t-author">
-          <div class="t-avatar">RS</div>
+          <div class="t-avatar" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" aria-label="Avatar icon">
+              <circle cx="24" cy="24" r="24" fill="#E8503A" />
+              <circle cx="24" cy="18" r="9" fill="#F7F7F5" />
+              <path d="M10 40c2.8-7.4 8.4-11 14-11s11.2 3.6 14 11" fill="#F7F7F5" />
+            </svg>
+          </div>
           <div>
             <div class="t-name">Rajib Sheikh</div>
             <div class="t-role">E-commerce Client</div>
@@ -362,7 +540,13 @@
         <p class="t-text">"Superb website! I really liked the contrast and the combination of colours. You nailed it!
           Recommend him 100%!"</p>
         <div class="t-author">
-          <div class="t-avatar">AF</div>
+          <div class="t-avatar" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" aria-label="Avatar icon">
+              <circle cx="24" cy="24" r="24" fill="#0A0A0A" />
+              <circle cx="24" cy="18" r="9" fill="#F2C4A0" />
+              <path d="M10 40c2.8-7.4 8.4-11 14-11s11.2 3.6 14 11" fill="#F2C4A0" />
+            </svg>
+          </div>
           <div>
             <div class="t-name">Aiman Al Fuad</div>
             <div class="t-role">Business Website</div>
@@ -375,7 +559,13 @@
         <p class="t-text">"Fast delivery, great communication and results beyond our expectations. Our WhatsApp orders
           tripled after launch!"</p>
         <div class="t-author">
-          <div class="t-avatar">TK</div>
+          <div class="t-avatar" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" aria-label="Avatar icon">
+              <circle cx="24" cy="24" r="24" fill="#E8825A" />
+              <circle cx="24" cy="18" r="9" fill="#FFFFFF" />
+              <path d="M10 40c2.8-7.4 8.4-11 14-11s11.2 3.6 14 11" fill="#FFFFFF" />
+            </svg>
+          </div>
           <div>
             <div class="t-name">Tech Kart BD</div>
             <div class="t-role">Pro Plan Client</div>
@@ -390,54 +580,95 @@
     <div class="section-label">Let's Talk</div>
     <h2 class="section-title">Ready to Grow?</h2>
     <p class="section-sub">Message me on WhatsApp or email and I'll get back to you within 24 hours.</p>
-
-    <div class="contact-card reveal">
-      <h3 style="font-size:1.3rem;margin-bottom:6px;">Get in Touch</h3>
+    <div class="envelope-wrapper reveal">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="wax-seal">
+          <span class="wax-left"></span>
+          <span class="wax-right"></span>
+        </div>
+        <div class="envelope-content">
+          <div class="contact-card">
+            <h3 style="font-size:1.3rem;margin-bottom:6px;">Get in Touch</h3>
       <p style="color:var(--muted);font-size:0.9rem;">I'm currently taking new projects. Let's build something great
         together.</p>
 
-      <div style="display:flex; flex-direction:column; gap:16px; margin-top:24px;">
-        <button class="btn-primary" style="width:100%;"
+      <form id="contactForm" class="contact-form" novalidate>
+        <label class="form-field" for="contactName">
+          <span>Name</span>
+          <input id="contactName" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80"
+            placeholder="Your name">
+        </label>
+        <label class="form-field" for="contactEmail">
+          <span>Email</span>
+          <input id="contactEmail" name="email" type="email" autocomplete="email" required maxlength="120"
+            placeholder="you@example.com">
+        </label>
+        <label class="form-field" for="contactMessage">
+          <span>Message</span>
+          <textarea id="contactMessage" name="message" required minlength="10" maxlength="1200"
+            placeholder="Tell me a bit about your project"></textarea>
+        </label>
+
+        <p id="contactFormStatus" class="form-status" aria-live="polite"></p>
+
+        <div class="contact-form-actions">
+          <button type="submit" class="btn-primary" style="width:100%;">
+            <span>📧 Send via Email</span>
+          </button>
+          <button type="button" id="contactWhatsAppFallback" class="btn-outline" style="width:100%;">
+            <span>💬 Send via WhatsApp</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="contact-direct-actions">
+        <button class="btn-outline" type="button" style="width:100%;"
           onclick="window.open('https://wa.me/8801838917670?text=Hi Ittehad! I want to discuss a website project.','_blank')">
-          <span>💬 Chat on WhatsApp</span>
-        </button>
-        <button class="btn-outline" style="width:100%; border-color: rgba(212,175,55,0.3);"
-          onclick="window.location.href='mailto:toittehad.psnl@gmail.com'">
-          <span>📧 Send a Mail</span>
+          <span>Open WhatsApp Directly</span>
         </button>
       </div>
+      </div>
     </div>
+    <!-- Envelope bottom pocket over the card -->
+    <div class="envelope-pocket"></div>
+  </div>
+</div>
   </section>
 
   <!-- ── WhatsApp FAB ────────────────────────────────────────── -->
   <div class="whatsapp-fab" onclick="window.open('https://wa.me/8801838917670','_blank')" title="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 1.76.46 3.41 1.28 4.88L2 22l5.24-1.37c1.4.74 2.98 1.15 4.65 1.15 5.5 0 9.98-4.49 9.98-10.02S17.48 2.04 12 2.04zm5.02 14.28c-.21.59-1.2.1-1.63-.09-1.29-.56-2.61-1.39-4.22-3-1.61-1.61-2.43-2.92-3.0-4.21-.18-.42-.69-1.42-.09-1.63.61-.22.95.42 1.16.89.21.46.42 1.25-.09 1.76-.52.52-1.04.68-.68 1.48.36.79 1.74 2.16 2.52 2.52.79.36.95-.18 1.48-.68.52-.52 1.3-.3 1.76-.09.46.21 1.11.55 1.76 1.16.65.61.27 1.32.05 1.91z"/></svg>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 1.76.46 3.41 1.28 4.88L2 22l5.24-1.37c1.4.74 2.98 1.15 4.65 1.15 5.5 0 9.98-4.49 9.98-10.02S17.48 2.04 12 2.04zm5.02 14.28c-.21.59-1.2.1-1.63-.09-1.29-.56-2.61-1.39-4.22-3-1.61-1.61-2.43-2.92-3.0-4.21-.18-.42-.69-1.42-.09-1.63.61-.22.95.42 1.16.89.21.46.42 1.25-.09 1.76-.52.52-1.04.68-.68 1.48.36.79 1.74 2.16 2.52 2.52.79.36.95-.18 1.48-.68.52-.52 1.3-.3 1.76-.09.46.21 1.11.55 1.76 1.16.65.61.27 1.32.05 1.91z" />
+    </svg>
     Chat on WhatsApp
   </div>
 
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer>
-    <p>© 2026 <span>Ahnaf Ittehad</span> · Built to dominate 🚀 · All rights reserved.</p>
+    <p>© 2026 <span>Ahnaf Ittehad</span> · Made with care in Dhaka 🌸 · All rights reserved.</p>
   </footer>
 
   <script defer src="js/main.js"></script>
-  <script type="module">
-    import { FlowButton } from './components/ui/index.js';
-    document.querySelectorAll('.hero-btns .btn-outline').forEach(FlowButton.upgrade);
-  </script>
 
   <!-- Project Modal -->
   <div id="projectModal" class="project-modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <img id="modalImg" src="" alt="">
-      <div class="modal-body">
-        <div id="modalTag" class="card-tag"
-          style="position:relative;display:inline-block;top:0;left:0;margin-bottom:10px;"></div>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
-        <a id="modalLink" href="#" target="_blank" class="btn-primary"
-          style="display:inline-block;margin-top:20px;text-decoration:none;"><span>View Live Project</span></a>
+      <div class="modal-layout">
+        <div class="modal-preview-container">
+          <iframe id="modalPreview" src="about:blank" title="Project Preview"></iframe>
+          <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-body">
+          <div id="modalTag" class="card-tag"
+            style="position:relative;display:inline-block;top:0;left:0;margin-bottom:10px;"></div>
+          <h2 id="modalTitle"></h2>
+          <p id="modalDesc"></p>
+          <a id="modalLink" href="#" target="_blank" class="btn-primary"
+            style="display:inline-block;margin-top:20px;text-decoration:none;"><span>View Live Project</span></a>
+        </div>
       </div>
     </div>
   </div>
